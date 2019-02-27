@@ -1,0 +1,61 @@
+<html>
+<head><title>Submit Team Project 201809</title></head>
+<body>
+<h4><span style="color: #339966;"><strong>Milestone 3: is due before 10pm on Wednesday Dec 12th</strong></span></h4>
+<h2>Team Project Objectives</h2>
+<ul>
+<li>work together in a performing team</li>
+<li>design a multi-class GUI program</li>
+<li>implement that program using Java FX</li>
+<li>consult with a TA regarding design and implementation choices</li>
+<li>complete a medium sized project</li>
+</ul>
+<h2>A-Team</h2>
+<p>The Team Project must be completed in teams of 4 to 5 students.&nbsp; Teams with less than 4 students will lose points.</p>
+<h2>Description (100pts)</h2>
+<p>Complete your Java FX program that solves this problem:&nbsp;<a title="Program Design: Problem Statement -- Food Query and Meal Analysis" href="https://canvas.wisc.edu/courses/121155/pages/program-design-problem-statement-food-query-and-meal-analysis" data-api-endpoint="https://canvas.wisc.edu/api/v1/courses/121155/pages/program-design-problem-statement-food-query-and-meal-analysis" data-api-returntype="Page">Program Design: Problem Statement -- Food Query and Meal Analysis</a></p>
+<h2>Submission: <strong>submit only food.zip</strong></h2>
+<p>NOTE: you must create your&nbsp;<strong>executable.jar</strong> and&nbsp;<strong>food.zip</strong>&nbsp;as described here.<strong><br />CAUTION: food.zip</strong> must contain screenshot, executable.jar, and all source files as described in this document.</p>
+<p><span style="color: #3366ff;"><strong><span style="background-color: #ffff00;">Practice these steps first and submit, then do again when your program is working.</span></strong></span><br /><span style="color: #3366ff;"><strong><span style="background-color: #ffff00;">These instructions assume that your project files are on CS files servers.<br /></span></strong></span><a title="Try your Java FX program on a CS Linux Workstation" href="https://canvas.wisc.edu/courses/121155/pages/try-your-java-fx-program-on-a-cs-linux-workstation" data-api-endpoint="https://canvas.wisc.edu/api/v1/courses/121155/pages/try-your-java-fx-program-on-a-cs-linux-workstation" data-api-returntype="Page">Try your Java FX program on a CS Linux Workstation</a><br /><span style="color: #3366ff;"><strong><span style="background-color: #ffff00;">All source files must be in package application</span></strong></span><span style="color: #3366ff;"><span style="background-color: #ffff00;"></span></span></p>
+<ol>
+<li>
+<p><strong>Copy or create&nbsp;<a href="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/manifest.txt">manifest.txt</a>&nbsp;and <a href="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/manifest_srcbin.txt">manifest_srcbin.txt</a>&nbsp;files and add them to your project folder.<br />Note: the blank last line is required.<br /><img src="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/manifest_files.png" alt="Manifest-Version: 1.0\nCreated-By: deppeler\nMain-Class: application.Main\n\n"  /></strong></p>
+</li>
+<li>
+<p><strong>Copy or create this&nbsp;<a href="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/Makefile">Makefile</a>&nbsp;and add it to your project folder.<br />&nbsp;make nosrc&nbsp; &nbsp; &nbsp; &nbsp; </strong>&nbsp;# will build executable when there are not separate src and bin folders for your project<strong><br />&nbsp;make srcbin&nbsp; &nbsp; &nbsp; &nbsp;</strong> # will build executable when there are separate src and bin folders for your project<strong><br /><img src="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/Makefile.png" alt="contains targets for building executables"  /><br /></strong></p>
+</li>
+<li><strong>Create an executable.jar using the above Makefile targets&nbsp;<br /></strong>Note: you must repeat this step when program code changes
+<ol>
+<li>launch a terminal window (if the make utility is not available, you must type commands each time)</li>
+<li>navigate to your project folder (the parent folder of your&nbsp;<strong>application</strong> package folder)</li>
+<li>confirm that the above manifest and Makefile files are present in the project folder</li>
+<li>If your source (.java) files are in same folder as class files, run:&nbsp; &nbsp; &nbsp;<strong>make nosrc</strong><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong>javac -d . application/*.java<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jar -cfm executable.jar manifest.txt application<br /><br /></strong></li>
+<li>Or, if your java files are in separate <em>src</em> and <em>bin</em> folders, run:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>make srcbin</strong><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong>javac -d bin src/application/*.java<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong>jar -cfm executable.jar manifest_srcbin.txt -C bin application<br /><br /></strong></li>
+</ol>
+</li>
+<li><strong>Create a screenshot.jpg showing meal analysis</strong> (must repeat this step if layout changes)
+<ul>
+<li>run your program with provided data file</li>
+<li>add a food</li>
+<li>create a meal</li>
+<li>analyze the meal</li>
+<li>take a screenshot of the view showing meal and meal analysis</li>
+<li>save as screenshot.jpg or screenshot.png in your project directory<br /><br /></li>
+</ul>
+</li>
+<li><strong>Create a food.zip</strong>&nbsp;file that contains executable.jar, screenshot.png, and all source files.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>make run</strong><br />Note: this step must be repeated if anything changes.<br /><br />The first target in the Makefile above will run your executable and create a zip file that includes all files inside your project, but does not include your project directory file.&nbsp; This is what we want.<br /><br />
+<ul>
+<li><span style="text-decoration: underline;"></span><strong>cd project</strong>&nbsp;(go to your project folder -- do not go to&nbsp;<strong>src</strong> folder if you have src folder within project folder)</li>
+<li><strong>jar -cMf food.zip .<br /><br /></strong></li>
+</ul>
+</li>
+<li><strong>Check that your food.zip file contains the following structure</strong> (must repeat if anything changes)<br /><br /><a href="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/foodzip.png"><strong>food.zip for no src and bin folders</strong></a><strong><br /><a href="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/foodzipsrc.png">food.zip for src and bin folders</a><br /><br /></strong></li>
+<li><strong>Upload food.zip</strong> (this file should be in your project folder - not src folder) (Must repeat this step if anything changes).</li>
+</ol>
+<p>&nbsp;</p>
+<pre></pre>
+<h2><a href="https://pages.cs.wisc.edu/~deppeler/cs400/assignments/p5/files/grading-rubric-tentative.pdf">tentative grading rubric for Milestone #3</a></h2>
+
+</body>
+</html>
+
